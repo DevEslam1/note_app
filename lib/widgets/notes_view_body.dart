@@ -9,7 +9,7 @@ class NotesViewBody extends StatelessWidget {
       children: [
         Text(
           'Notes View Body',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ],
     );
