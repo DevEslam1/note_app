@@ -5,9 +5,13 @@ class NotesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Notes')),
-      body: const Center(child: Text('This is the Notes View Body')),
+    return Column(
+      children: [
+        Text(
+          'Notes View Body',
+          style: TextStyle(color: Colors.white, fontSize: 24),
+        ),
+      ],
     );
   }
 }

@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widgets/notes_view_body.dart';
+import 'package:note_app/views/note_view.dart';
 
 void main() {
-  runApp(const note_app());
+  runApp(const NoteApp());
 }
 
-class note_app extends StatelessWidget {
-  const note_app({super.key});
+class NoteApp extends StatelessWidget {
+  const NoteApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: NotesViewBody());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: NotesView(),
+      theme: ThemeData.from(useMaterial3: true, colorScheme: ColorScheme.dark())
+          .copyWith(
+            scaffoldBackgroundColor: const Color.fromARGB(255, 68, 56, 54),
+          ),
+    );
   }
 }
