@@ -7,7 +7,12 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       backgroundColor: Color.fromARGB(255, 68, 56, 54),
-      title: Text('My Notes', style: Theme.of(context).textTheme.headlineLarge),
+      title: Text(
+        'My Notes',
+        style: Theme.of(
+          context,
+        ).textTheme.headlineLarge?.copyWith(color: Colors.white),
+      ),
       floating: true,
       snap: true,
       actions: [
@@ -19,7 +24,10 @@ class CustomAppBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
               boxShadow: [BoxShadow(color: Colors.white12)],
             ),
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search, color: Colors.white),
+            ),
           ),
         ),
       ],

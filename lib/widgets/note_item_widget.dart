@@ -6,8 +6,8 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(right: 12, left: 12, top: 34, bottom: 34),
       width: double.infinity,
-      height: 250,
       decoration: BoxDecoration(
         color: Colors.yellow.withOpacity(0.7),
         borderRadius: BorderRadius.circular(12),
@@ -23,12 +23,15 @@ class NoteItem extends StatelessWidget {
               'Sample Note',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: Text(
-              'This is a sample note item.',
-              style: Theme.of(context).textTheme.bodyMedium,
+            subtitle: Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: Text(
+                'This is a sample note item.',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
             ),
             trailing: IconButton(
-              icon: Icon(Icons.delete, color: Colors.black),
+              icon: Icon(Icons.delete, color: Colors.black, size: 35),
               onPressed: () {},
             ),
           ),

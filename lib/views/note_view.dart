@@ -14,7 +14,7 @@ class NotesView extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                padding: const EdgeInsets.symmetric(vertical: 2.0),
                 child: NoteItem(),
               ),
               childCount: 10,

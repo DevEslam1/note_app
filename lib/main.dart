@@ -14,9 +14,18 @@ class NoteApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: NotesView(),
-      theme: ThemeData.from(useMaterial3: true, colorScheme: ColorScheme.dark())
-          .copyWith(
+      theme:
+          ThemeData.from(
+            useMaterial3: true,
+            colorScheme: ColorScheme.light(),
+          ).copyWith(
             scaffoldBackgroundColor: const Color.fromARGB(255, 68, 56, 54),
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.white,
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.black),
+              titleTextStyle: TextStyle(color: Colors.black),
+            ),
             textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme)
                 .copyWith(
                   headlineLarge: const TextStyle(
